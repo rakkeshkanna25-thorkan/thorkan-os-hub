@@ -10,33 +10,193 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AiFeedRouteImport } from './routes/ai-feed'
+import { Route as AnalyticsRouteImport } from './routes/analytics'
+import { Route as CybersecurityRouteImport } from './routes/cybersecurity'
+import { Route as GameCenterRouteImport } from './routes/game-center'
+import { Route as HabitsRouteImport } from './routes/habits'
+import { Route as HomeAutomationRouteImport } from './routes/home-automation'
+import { Route as HubRouteImport } from './routes/hub'
+import { Route as OrchestratorRouteImport } from './routes/orchestrator'
+import { Route as PersonalRouteImport } from './routes/personal'
+import { Route as ResearchRouteImport } from './routes/research'
+import { Route as RulesRouteImport } from './routes/rules'
+import { Route as VehicleRouteImport } from './routes/vehicle'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AiFeedRoute = AiFeedRouteImport.update({
+  id: '/ai-feed',
+  path: '/ai-feed',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AnalyticsRoute = AnalyticsRouteImport.update({
+  id: '/analytics',
+  path: '/analytics',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CybersecurityRoute = CybersecurityRouteImport.update({
+  id: '/cybersecurity',
+  path: '/cybersecurity',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GameCenterRoute = GameCenterRouteImport.update({
+  id: '/game-center',
+  path: '/game-center',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HabitsRoute = HabitsRouteImport.update({
+  id: '/habits',
+  path: '/habits',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HomeAutomationRoute = HomeAutomationRouteImport.update({
+  id: '/home-automation',
+  path: '/home-automation',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HubRoute = HubRouteImport.update({
+  id: '/hub',
+  path: '/hub',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OrchestratorRoute = OrchestratorRouteImport.update({
+  id: '/orchestrator',
+  path: '/orchestrator',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PersonalRoute = PersonalRouteImport.update({
+  id: '/personal',
+  path: '/personal',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResearchRoute = ResearchRouteImport.update({
+  id: '/research',
+  path: '/research',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RulesRoute = RulesRouteImport.update({
+  id: '/rules',
+  path: '/rules',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VehicleRoute = VehicleRouteImport.update({
+  id: '/vehicle',
+  path: '/vehicle',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/ai-feed': typeof AiFeedRoute
+  '/analytics': typeof AnalyticsRoute
+  '/cybersecurity': typeof CybersecurityRoute
+  '/game-center': typeof GameCenterRoute
+  '/habits': typeof HabitsRoute
+  '/home-automation': typeof HomeAutomationRoute
+  '/hub': typeof HubRoute
+  '/orchestrator': typeof OrchestratorRoute
+  '/personal': typeof PersonalRoute
+  '/research': typeof ResearchRoute
+  '/rules': typeof RulesRoute
+  '/vehicle': typeof VehicleRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/ai-feed': typeof AiFeedRoute
+  '/analytics': typeof AnalyticsRoute
+  '/cybersecurity': typeof CybersecurityRoute
+  '/game-center': typeof GameCenterRoute
+  '/habits': typeof HabitsRoute
+  '/home-automation': typeof HomeAutomationRoute
+  '/hub': typeof HubRoute
+  '/orchestrator': typeof OrchestratorRoute
+  '/personal': typeof PersonalRoute
+  '/research': typeof ResearchRoute
+  '/rules': typeof RulesRoute
+  '/vehicle': typeof VehicleRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/ai-feed': typeof AiFeedRoute
+  '/analytics': typeof AnalyticsRoute
+  '/cybersecurity': typeof CybersecurityRoute
+  '/game-center': typeof GameCenterRoute
+  '/habits': typeof HabitsRoute
+  '/home-automation': typeof HomeAutomationRoute
+  '/hub': typeof HubRoute
+  '/orchestrator': typeof OrchestratorRoute
+  '/personal': typeof PersonalRoute
+  '/research': typeof ResearchRoute
+  '/rules': typeof RulesRoute
+  '/vehicle': typeof VehicleRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/ai-feed'
+    | '/analytics'
+    | '/cybersecurity'
+    | '/game-center'
+    | '/habits'
+    | '/home-automation'
+    | '/hub'
+    | '/orchestrator'
+    | '/personal'
+    | '/research'
+    | '/rules'
+    | '/vehicle'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/ai-feed'
+    | '/analytics'
+    | '/cybersecurity'
+    | '/game-center'
+    | '/habits'
+    | '/home-automation'
+    | '/hub'
+    | '/orchestrator'
+    | '/personal'
+    | '/research'
+    | '/rules'
+    | '/vehicle'
+  id:
+    | '__root__'
+    | '/'
+    | '/ai-feed'
+    | '/analytics'
+    | '/cybersecurity'
+    | '/game-center'
+    | '/habits'
+    | '/home-automation'
+    | '/hub'
+    | '/orchestrator'
+    | '/personal'
+    | '/research'
+    | '/rules'
+    | '/vehicle'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AiFeedRoute: typeof AiFeedRoute
+  AnalyticsRoute: typeof AnalyticsRoute
+  CybersecurityRoute: typeof CybersecurityRoute
+  GameCenterRoute: typeof GameCenterRoute
+  HabitsRoute: typeof HabitsRoute
+  HomeAutomationRoute: typeof HomeAutomationRoute
+  HubRoute: typeof HubRoute
+  OrchestratorRoute: typeof OrchestratorRoute
+  PersonalRoute: typeof PersonalRoute
+  ResearchRoute: typeof ResearchRoute
+  RulesRoute: typeof RulesRoute
+  VehicleRoute: typeof VehicleRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +208,107 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/ai-feed': {
+      id: '/ai-feed'
+      path: '/ai-feed'
+      fullPath: '/ai-feed'
+      preLoaderRoute: typeof AiFeedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/analytics': {
+      id: '/analytics'
+      path: '/analytics'
+      fullPath: '/analytics'
+      preLoaderRoute: typeof AnalyticsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cybersecurity': {
+      id: '/cybersecurity'
+      path: '/cybersecurity'
+      fullPath: '/cybersecurity'
+      preLoaderRoute: typeof CybersecurityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/game-center': {
+      id: '/game-center'
+      path: '/game-center'
+      fullPath: '/game-center'
+      preLoaderRoute: typeof GameCenterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/habits': {
+      id: '/habits'
+      path: '/habits'
+      fullPath: '/habits'
+      preLoaderRoute: typeof HabitsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/home-automation': {
+      id: '/home-automation'
+      path: '/home-automation'
+      fullPath: '/home-automation'
+      preLoaderRoute: typeof HomeAutomationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hub': {
+      id: '/hub'
+      path: '/hub'
+      fullPath: '/hub'
+      preLoaderRoute: typeof HubRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/orchestrator': {
+      id: '/orchestrator'
+      path: '/orchestrator'
+      fullPath: '/orchestrator'
+      preLoaderRoute: typeof OrchestratorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/personal': {
+      id: '/personal'
+      path: '/personal'
+      fullPath: '/personal'
+      preLoaderRoute: typeof PersonalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/research': {
+      id: '/research'
+      path: '/research'
+      fullPath: '/research'
+      preLoaderRoute: typeof ResearchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rules': {
+      id: '/rules'
+      path: '/rules'
+      fullPath: '/rules'
+      preLoaderRoute: typeof RulesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vehicle': {
+      id: '/vehicle'
+      path: '/vehicle'
+      fullPath: '/vehicle'
+      preLoaderRoute: typeof VehicleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AiFeedRoute: AiFeedRoute,
+  AnalyticsRoute: AnalyticsRoute,
+  CybersecurityRoute: CybersecurityRoute,
+  GameCenterRoute: GameCenterRoute,
+  HabitsRoute: HabitsRoute,
+  HomeAutomationRoute: HomeAutomationRoute,
+  HubRoute: HubRoute,
+  OrchestratorRoute: OrchestratorRoute,
+  PersonalRoute: PersonalRoute,
+  ResearchRoute: ResearchRoute,
+  RulesRoute: RulesRoute,
+  VehicleRoute: VehicleRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
